@@ -12,7 +12,6 @@ app.get('/todolist', function (req, res) {
 })
 
 
-
 // Add more api calls here for each requirement
 
 // app.listen(3000, function () {

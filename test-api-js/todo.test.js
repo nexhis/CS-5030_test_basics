@@ -8,6 +8,11 @@ describe('todo test suite', () => {
     });
     
     let todo_service = new todoservice();
+    var a = {
+        tittle: "T4",
+        description: "D4",
+        done: false
+    }
 
     test("if service instance is created", () => {
         expect(todo_service instanceof todoservice).toBe(true);
@@ -22,6 +27,10 @@ describe('todo test suite', () => {
     
 
     // Write all your test cases here that corresponds to software requirements
+
+    test("add_todos", () => {
+        expect(todo_service.add_todo(a).todo.length).toEqual(4);
+    });
 
 
 });

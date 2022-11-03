@@ -23,16 +23,12 @@ class todoservice{
     }
 
     add_todo(todo){
-        // Your code here
+        this.todos.todo.push(todo);
+        return this.todos;
+
     }
 
-    delete_todo(id){
-        // Your code here
-    }
-
-    update_todo(id, todo){
-        // Your code here
-    }
+  
 }
 
 
