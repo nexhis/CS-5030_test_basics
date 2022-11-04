@@ -27,8 +27,13 @@ class todoservice{
         return this.todos;
 
     }
+    delete_todo(id){
+        delete this.todos.todo[id];
+        this.todos.todo.splice(id,2)
+        return this.todos;
 
-  
+    }
+
 }
 
 
