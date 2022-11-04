@@ -21,31 +21,30 @@ describe('todo test suite', () => {
     
 
     // Write all your test cases here that corresponds to software requirements
-    var a = {
-        tittle: "T4",
-        description: "D4",
-        done: false
-    }
+  
 
     var id = 1;
 
-    var new_id = 2;
-
-    var new_item = {
-        tittle: "T3",
-        description: "D10",
-        done: false
-    }
+    var new_id = 3;
 
 
     test("add_todos", () => {
-        expect(todo_service.add_todo(a).todo.length).toEqual(4);
+        expect(todo_service.add_todo({
+            tittle: "T4",
+            description: "D4",
+            done: false
+        }).todo.length).toEqual(4);
     });
+
     test("delete_todos", () => {
         expect(todo_service.delete_todo(id).todo.length).toEqual(2);
     });
     test("update_todo", () => {
-        expect(todo_service.update_todo(new_id, new_item).todo[2]).toEqual(new_item);
+        expect(todo_service.update_todo(new_id, {tittle: "T3",description: "D10",done: false}).todo[3]).toEqual({
+            tittle: "T3",
+            description: "D10",
+            done: false
+        });
       });
 
 });
